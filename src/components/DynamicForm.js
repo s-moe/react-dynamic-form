@@ -48,8 +48,11 @@ export default function DynamicForm({ data }) {
             <div key={data.name}>
               {data.tag === "input" && !data.hide && (
                 <>
-                  <label>{data.human_label}</label>
+                  <label className={data.human_label}>
+                    {data.human_label} htmlFor={data.human_label}
+                  </label>
                   <input
+                    aria-label={data.human_label}
                     className={data.name}
                     name={data.name}
                     onChange={handleChange}
@@ -66,7 +69,9 @@ export default function DynamicForm({ data }) {
             </div>
           );
         })}
-        <button className="btn">Submit</button>
+        <button className="btn" aria-label="Submit">
+          Submit
+        </button>
       </form>
     </div>
   );

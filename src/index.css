@@ -30,9 +30,6 @@
 }
 .parental_consent {
   margin: 6px;
-  /* padding: 100px; */
-  /* padding-top: 2rem; */
-  /* margin: 8px; */
 }
 
 .btn {
@@ -47,7 +44,7 @@
   display: block;
   margin-top: 8px;
 }
-.email::before {
+label::before {
   content: "*";
   color: black;
 }
