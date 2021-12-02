@@ -17,7 +17,20 @@ export default function DynamicForm({ data }) {
   //render checkbox conditionally (based on birthdate)
   return (
     <div>
-      <form onSubmit={handleSubmit}></form>
+      <form onSubmit={handleSubmit}>
+        {userData.map((data) => {
+          return (
+            <div>
+              {data.tag === "input" && (
+                <>
+                  <label>{data.human_label}</label>
+                  <input name={data.name} />
+                </>
+              )}
+            </div>
+          );
+        })}
+      </form>
     </div>
   );
 }
