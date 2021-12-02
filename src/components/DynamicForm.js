@@ -6,7 +6,8 @@ export default function DynamicForm({ data }) {
   //need a handleSubmit for submit button
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserData({});
+    alert("Thank you! We received your information and will be in touch soon.");
+    setUserData({ data });
     console.log(userData);
   };
 
@@ -34,7 +35,13 @@ export default function DynamicForm({ data }) {
               {data.tag === "input" && (
                 <>
                   <label>{data.human_label}</label>
-                  <input name={data.name} onChange={handleChange} />
+                  <input
+                    className={data.name}
+                    name={data.name}
+                    onChange={handleChange}
+                    type={data.type}
+                    value={data.value}
+                  />
                 </>
               )}
             </div>
