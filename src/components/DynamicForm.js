@@ -48,9 +48,9 @@ export default function DynamicForm({ data }) {
             <div key={data.name}>
               {data.tag === "input" && !data.hide && (
                 <>
-                  <label className={data.name}>{data.human_label}</label>
+                  <label>{data.human_label}</label>
                   <input
-                    className="form-input"
+                    className={data.name}
                     name={data.name}
                     onChange={handleChange}
                     type={data.type}
