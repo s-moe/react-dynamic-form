@@ -42,13 +42,13 @@ export default function DynamicForm({ data }) {
   return (
     <div>
       <pre>{JSON.stringify(userData)}</pre>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-container">
         {userData.map((data) => {
           return (
             <div key={data.name}>
               {data.tag === "input" && !data.hide && (
                 <>
-                  <label>{data.human_label}</label>
+                  <label className={data.name}>{data.human_label}</label>
                   <input
                     className={data.name}
                     name={data.name}
