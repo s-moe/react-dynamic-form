@@ -1,7 +1,13 @@
+import DynamicForm from "./components/DynamicForm";
 import "./index.css";
+import DynamicForm from "./components/DynamicForm";
 
 function App() {
-  return <div className="App">Testing</div>;
+  return (
+    <>
+      <DynamicForm />
+    </>
+  );
 }
 
 export default App;
