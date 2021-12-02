@@ -42,9 +42,17 @@
   border-radius: 15px;
   cursor: pointer;
   display: block;
-  margin-top: 8px;
+  margin-top: 12px;
 }
-label::before {
+div [class="Date of Birth"]::before {
+  content: "*";
+  color: black;
+}
+div [class="Email Address"]::before {
+  content: "*";
+  color: black;
+}
+div [class="Parental Consent"]::before {
   content: "*";
   color: black;
 }
