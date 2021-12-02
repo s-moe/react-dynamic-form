@@ -22,7 +22,7 @@ export default function DynamicForm({ data }) {
         data.value = e.target.value;
       }
     });
-    setUserData({ ...userData });
+    setUserData([...userData]);
   };
   //need the function for determining date
   const showIf = (value) => {
@@ -51,6 +51,9 @@ export default function DynamicForm({ data }) {
                     onChange={handleChange}
                     type={data.type}
                     value={data.value || ""}
+                    required={
+                      data.name === "email" || data.name === "date_of_birth"
+                    }
                   />
                 </>
               )}
