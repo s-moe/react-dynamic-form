@@ -20,7 +20,7 @@ export default function DynamicForm({ data }) {
       <form onSubmit={handleSubmit}>
         {userData.map((data) => {
           return (
-            <div>
+            <div key={data.name}>
               {data.tag === "input" && (
                 <>
                   <label>{data.human_label}</label>
@@ -30,6 +30,7 @@ export default function DynamicForm({ data }) {
             </div>
           );
         })}
+        <button>Submit</button>
       </form>
     </div>
   );
