@@ -2,12 +2,12 @@ import { useState } from "react";
 
 export default function DynamicForm({ data }) {
   //set state for user input
-  const [userData, setUserData] = useState(data);
+  const [userData, setUserData] = useState(JSON.parse(JSON.stringify(data)));
   //need a handleSubmit for submit button
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you! We received your information and will be in touch soon.");
-    setUserData({ data });
+    setUserData(JSON.parse(JSON.stringify(data)));
     console.log(userData);
   };
 
@@ -28,6 +28,7 @@ export default function DynamicForm({ data }) {
   //render checkbox conditionally (based on birthdate)
   return (
     <div>
+      <pre>{JSON.stringify(userData)}</pre>
       <form onSubmit={handleSubmit}>
         {userData.map((data) => {
           return (
