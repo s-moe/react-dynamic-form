@@ -4,10 +4,10 @@ export default function DynamicForm({ data }) {
   //set state for user input
   const [userData, setUserData] = useState(JSON.parse(JSON.stringify(data)));
 
-  //on Submit: prevents form from default behavior of submitting
-  //alerts user we received their info
-  //resets the state (not the checkbox???)
-  //logs the user's inputted values to the console
+  /* on Submit: prevents form from default behavior of submitting
+  alerts user we received their info
+  resets the state (but not the checkbox if it's been checked - need more time with this)
+  logs the user's inputted values to the console per instructions */
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you! We received your information and will be in touch soon.");
@@ -15,8 +15,8 @@ export default function DynamicForm({ data }) {
     console.log(userData);
   };
 
-  //need a handleChange for user's input
-  //need to create conditional to only show checkbox based on date of birth
+  //handleChange for user's input. This also manages visibility of showIf
+
   const handleChange = (e) => {
     userData.forEach((data) => {
       if (data.conditional && data.conditional.name === e.target.name) {
@@ -28,7 +28,7 @@ export default function DynamicForm({ data }) {
     });
     setUserData([...userData]);
   };
-  //need the function for determining date
+  //function for determining whether parental consent is required
   const showIf = (value) => {
     const now = new Date();
     return (
@@ -37,8 +37,8 @@ export default function DynamicForm({ data }) {
     );
   };
 
-  //render a dynamic form using the json data
-  //render checkbox conditionally (based on birthdate)
+  //renders a dynamic form using the json data
+  //renders checkbox conditionally (based on birthdate)
   return (
     <div>
       <pre>{JSON.stringify(userData)}</pre>
