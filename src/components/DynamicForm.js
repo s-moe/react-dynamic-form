@@ -3,7 +3,11 @@ import { useState } from "react";
 export default function DynamicForm({ data }) {
   //set state for user input
   const [userData, setUserData] = useState(JSON.parse(JSON.stringify(data)));
-  //need a handleSubmit for submit button
+
+  //on Submit: prevents form from default behavior of submitting
+  //alerts user we received their info
+  //resets the state (not the checkbox???)
+  //logs the user's inputted values to the console
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you! We received your information and will be in touch soon.");
@@ -52,7 +56,9 @@ export default function DynamicForm({ data }) {
                     type={data.type}
                     value={data.value || ""}
                     required={
-                      data.name === "email" || data.name === "date_of_birth"
+                      data.name === "email" ||
+                      data.name === "date_of_birth" ||
+                      data.name === "parental_consent"
                     }
                   />
                 </>
