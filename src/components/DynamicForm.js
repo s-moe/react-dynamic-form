@@ -50,7 +50,7 @@ export default function DynamicForm({ data }) {
                 <>
                   <label className={data.name}>{data.human_label}</label>
                   <input
-                    className={data.name}
+                    className="form-input"
                     name={data.name}
                     onChange={handleChange}
                     type={data.type}
@@ -66,7 +66,7 @@ export default function DynamicForm({ data }) {
             </div>
           );
         })}
-        <button>Submit</button>
+        <button className="btn">Submit</button>
       </form>
     </div>
   );
