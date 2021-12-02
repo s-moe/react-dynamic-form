@@ -12,8 +12,17 @@ export default function DynamicForm({ data }) {
   };
 
   //need a handleChange for user's input
+  //need to create conditional to only show checkbox based on date of birth
   const handleChange = (e) => {
-    userData.forEach((data) => {});
+    userData.forEach((data) => {
+      if (data.conditional && data.conditional.name === e.target.name) {
+        data.hide = !showIf(e.target.value);
+      }
+      if (data.name === e.target.name) {
+        data.value = e.target.value;
+      }
+    });
+    setUserData({ ...userData });
   };
   //need the function for determining date
   const showIf = (value) => {
@@ -41,7 +50,7 @@ export default function DynamicForm({ data }) {
                     name={data.name}
                     onChange={handleChange}
                     type={data.type}
-                    value={data.value}
+                    value={data.value || ""}
                   />
                 </>
               )}
