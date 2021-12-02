@@ -48,8 +48,11 @@ export default function DynamicForm({ data }) {
             <div key={data.name}>
               {data.tag === "input" && !data.hide && (
                 <>
-                  <label className={data.human_label}>
-                    {data.human_label} htmlFor={data.human_label}
+                  <label
+                    className={data.human_label}
+                    htmlFor={data.human_label}
+                  >
+                    {data.human_label}
                   </label>
                   <input
                     aria-label={data.human_label}
