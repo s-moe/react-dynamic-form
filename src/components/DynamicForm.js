@@ -11,7 +11,17 @@ export default function DynamicForm({ data }) {
   };
 
   //need a handleChange for user's input
+  const handleChange = (e) => {
+    userData.forEach((data) => {});
+  };
   //need the function for determining date
+  const showIf = (value) => {
+    const now = new Date();
+    return (
+      new Date(value) >=
+      new Date(now.getFullYear() - 13, now.getMonth(), now.getDate())
+    );
+  };
 
   //render a dynamic form using the json data
   //render checkbox conditionally (based on birthdate)
@@ -24,7 +34,7 @@ export default function DynamicForm({ data }) {
               {data.tag === "input" && (
                 <>
                   <label>{data.human_label}</label>
-                  <input name={data.name} />
+                  <input name={data.name} onChange={handleChange} />
                 </>
               )}
             </div>
