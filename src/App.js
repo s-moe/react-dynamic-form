@@ -2,12 +2,10 @@ import DynamicForm from "./components/DynamicForm";
 
 import data from "./data/data.json";
 
-function App() {
+export default function App() {
   return (
     <>
-      <DynamicForm />
+      <DynamicForm data={data} />
     </>
   );
 }
-
-export default App;
