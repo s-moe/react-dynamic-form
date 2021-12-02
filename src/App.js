@@ -1,5 +1,6 @@
 import DynamicForm from "./components/DynamicForm";
-import "./index.css";
+
+import data from "./data/data.json";
 
 function App() {
   return (
