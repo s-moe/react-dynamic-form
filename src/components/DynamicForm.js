@@ -46,7 +46,7 @@ export default function DynamicForm({ data }) {
         {userData.map((data) => {
           return (
             <div key={data.name}>
-              {data.tag === "input" && (
+              {data.tag === "input" && !data.hide && (
                 <>
                   <label>{data.human_label}</label>
                   <input
