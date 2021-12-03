@@ -62,3 +62,6 @@ div [class="First Name"]::before {
   content: "*";
   color: black;
 }
+input:focus {
+  border-color: blue;
+}
