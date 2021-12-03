@@ -11,7 +11,7 @@ Criteria 1:
 - Provided data is saved in data folder per your request. 
 - Form is rendered dynamically based on the provided JSON data.
 - Conditional field of "parental consent" renders conditionally.
-- Form data is logged to the console (and is also in a <pre> label) on submit.
+- Form data is logged to the console (and is also in a pre label) on submit.
 
 Criteria 2: 
 
