@@ -58,3 +58,7 @@ div [class="Parental Consent"]::before {
   content: "*";
   color: black;
 }
+div [class="First Name"]::before {
+  content: "*";
+  color: black;
+}

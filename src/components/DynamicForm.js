@@ -62,6 +62,7 @@ export default function DynamicForm({ data }) {
                     type={data.type}
                     value={data.value || ""}
                     required={
+                      data.name === "first_name" ||
                       data.name === "email" ||
                       data.name === "date_of_birth" ||
                       data.name === "parental_consent"
