@@ -32,6 +32,7 @@ Criteria 4:
 1. I would redirect the user to another page upon submitting the form. 
 2. I would likely use react-hook-form for validation, submission, registration.
 3. If I was directed to not have the page redirect upon submission, I would make sure the checkbox was unchecked once the form was submitted. Right now, if you check the box and submit the form the checkbox remains checked. This is a compliance issue and can be fixed using state and toggling the checkbox. 
+4. To improve upon design I would adjust the size of the checkbox to be slightly larger and provide more space between the submit button and the checkbox (for mobile and tablet users). I would also make sure all colors and fonts matched the brand assets of the company. I would also include a title (or presume the form would be on a page that would explain the purpose of the form). I would consider using placeholders, especially for phone numbers, so users would know if they needed to include their country codes and/or only area codes. 
 
 Thank you for this fun problem. I would love to hear your feedback on how my code could improve. 
 
