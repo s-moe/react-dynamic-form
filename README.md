@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+README for Sarah Moe's react-dynamic-form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Purpose: to dynamically build a form from a given JSON array of objects, each representing a form field. Conditional fields should render when condition is met. Data is to be returned, logged to the console, or rendered in the browser.
 
-## Available Scripts
+Library used: React.js
 
-In the project directory, you can run:
+** Notes **
 
-### `npm start`
+Criteria 1:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Provided data is saved in data folder per your request.
+Form is rendered dynamically based on the provided JSON data.
+Conditional field of "parental consent" renders conditionally.
+Form data is logged to the console (and is also in a pre tag) on submit.
+Criteria 2:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Comments made throughout code.
+Criteria 3:
 
-### `npm test`
+UX/UI designed based off of your company's Book a Demo form.
+Criteria 4:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Validation done via "require", though there are more sophisticated ways included in react-hook-form and/or using regex. For times' sake I simply added "require" to certain fields that I believe are necessary.
+If a field is empty that is required the user will receive a prompt upon attempting to submit the form similar in style to the Book a Demo form on your website.
+Otherwise, if a field is empty and not required the user will be able to submit the form without issue. This is esspecially important for fields like "Job Title" which may not apply to all users.
+** How Would I Improve My Project **
 
-### `npm run build`
+I would redirect the user to another page upon submitting the form.
+I would likely use react-hook-form for validation, submission, registration.
+If I was directed to not have the page redirect upon submission, I would make sure the checkbox was unchecked once the form was submitted. Right now, if you check the box and submit the form the checkbox remains checked. This is a compliance issue and can be fixed using state and toggling the checkbox.
+To improve upon design I would adjust the size of the checkbox to be slightly larger and provide more space between the submit button and the checkbox (for mobile and tablet users). I would also make sure all colors and fonts matched the brand assets of the company. I would also include a title (or presume the form would be on a page that would explain the purpose of the form). I would consider using placeholders, especially for phone numbers, so users would know if they needed to include their country codes and/or only area codes. I would also use another color of border for the selected field.
+I would include comments in my CSS to help readers understand the code better.
+Thank you for this fun problem. I would love to hear your feedback on how my code could improve.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sarah Moe
